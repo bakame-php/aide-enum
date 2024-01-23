@@ -171,16 +171,16 @@ enum HttpMethod: string
 
 #### Convert
 
-The `Convefrt` trait adds two (2) methods to convert Enums instances.
+The `Convert` trait adds two (2) methods to convert Enums instances.
 The `toAssociative` converts the Enum instance into an associative 
 array whereas the `toJavaScript` method converts the Enum into a 
-Javascript equivalent structure.
+JavaScript equivalent structure.
 
 ```php
 <?php
 
 HttpMethod::toAssociative(); // returns tha associative array
-HttpMethod::toJavaScript();  // returns a Javascript structure equivalent code as string
+HttpMethod::toJavaScript();  // returns a JavaScript structure equivalent code as string
 ```
 
 You need the `Bakame\Aide\Enum\Convert` trait to expose the new API.
@@ -261,7 +261,7 @@ use Bakame\Aide\Enum\JavaScriptConverter;
 echo JavaScriptConverter::new()->convertToObject(HttpStatusCode::class);
 ```
 
-will produce the following javascript code snippet:
+will produce the following JavaScript code snippet:
 
 ```javascript
 const HttpStatusCode = Object.freeze({
@@ -278,7 +278,7 @@ conversely using `convertToClass` as follows:
 echo JavaScriptConverter::new()->convertToClass(HttpStatusCode::class);
 ```
 
-will produce the following javascript code snippet:
+will produce the following JavaScript code snippet:
 
 ```javascript
 class HttpStatusCode {
@@ -359,7 +359,7 @@ use Bakame\Aide\Enum\JavaScriptConverter;
 echo JavaScriptConverter::new()->convertToObject(Color::class);
 ```
 
-will produce the following javascript code snippet:
+will produce the following JavaScript code snippet:
 
 ```javascript
 const Color = Object.freeze({
